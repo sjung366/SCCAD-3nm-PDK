@@ -28,7 +28,7 @@ The repository includes the following major components:
   - Technology LEF and routing constraints
   - Interconnect technology descriptions for RC extraction
 - **Timing Libraries**
-  - Liberty (`.lib`) files across PVT corners
+  - Liberty (`.lib`) files across three PVT corners
 - **Verification**
   - Design Rule Check (DRC) runsets
   - Layout-versus-Schematic (LVS) collateral
