@@ -5,6 +5,20 @@ This PDK is intended for academic research and educational use, enabling explora
 
 ---
 
+Please select the PDK for your EDA tool.
+
+
+| **Synopsys Users** | **Cadence Users** |
+|:---:|:---:|
+| <a href="./synopsys"><img src="https://img.shields.io/badge/Synopsys-PDK-purple?style=for-the-badge&logo=synopsys" height="50"></a> | <a href="./cadence"><img src="https://img.shields.io/badge/Cadence-PDK-red?style=for-the-badge&logo=cadence" height="50"></a> |
+| [📂 Go to Synopsys Files](./synopsys) | [📂 Go to Cadence Files](./cadence) |
+
+
+
+
+
+---
+
 ## Overview
 
 The SCCAD-3nm PDK provides a complete technology stack for digital design studies at the 3 nm node, including technology definitions, standard-cell libraries, timing models, parasitic extraction data, and design rule checking (DRC) support.
