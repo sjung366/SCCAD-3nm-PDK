@@ -1,0 +1,258 @@
+#Converted from 3nm_FF_noBPR.itf by using itf_to_ict.pl, version 4.98
+# 
+process 3nm_FF_noBPR { 
+   background_dielectric_constant 1.0
+   temp_reference 25 
+} 
+# Well declarations 
+well NWELL {} 
+well PWELL {} 
+ 
+# Diffusion Layers 
+diffusion Active {
+   thickness    	 0.001 
+   resistivity  	  
+} 
+ 
+diffusion P_SOURCE_DRAIN {
+   thickness    	 0.001 
+   resistivity  	  
+} 
+ 
+diffusion N_SOURCE_DRAIN {
+   thickness    	 0.001 
+   resistivity  	  
+} 
+ 
+# Conducting Layers 
+conductor LISD {
+   min_spacing  	 0.005 
+   min_width    	 0.010 
+   height       	 0.051 
+   thickness    	 0.027 
+   temp_tc1     	 4.5e-03 
+   temp_tc2     	 0 
+   gate_forming_layer  	 false 
+   rho  
+     rho_silicon_widths  0.009 0.018 0.027 0.036 0.045 0.054 0.063 0.072 0.081 0.09 0.099 0.108 0.117 0.126 0.135 0.144 0.153 0.162 0.171 0.18 0.189 0.198 0.207 0.216 0.225 0.234 0.243 0.252 0.261 0.27 0.279 0.288 0.297 0.306 0.315 0.324 0.333 0.342 0.351 0.36 
+     rho_silicon_thicknesses 0.027 
+     rho_values     0.8259 0.3381 0.2583 0.2257 0.2079 0.1965 0.1886 0.1828 0.1782 0.1745 0.1716 0.1691 0.1669 0.1651 0.1635 0.1621 0.1608 0.1597 0.1586 0.1577 0.1569 0.1561 0.1554 0.1547 0.1541 0.1535 0.153 0.1525 0.152 0.1516 0.1512 0.1508 0.1505 0.1501 0.1497 0.1495 0.1491 0.1488 0.1486 0.1483 
+   
+} 
+ 
+conductor M1 {
+   min_spacing  	 0.006 
+   min_width    	 0.012 
+   height       	 0.102 
+   thickness    	 0.024 
+   temp_tc1     	 4.0e-03 
+   temp_tc2     	 0 
+   gate_forming_layer  	 false 
+   rho  
+     rho_silicon_widths  0.012 0.024 0.030 0.036 
+     rho_silicon_thicknesses 0.024 
+     rho_values     0.1 0.061361936 0.05152793 0.047666912 
+   
+} 
+ 
+# conductor M2 {
+   # min_spacing  	 0.006
+   # min_width    	 0.012
+   # height       	 0.126
+   # thickness    	 0.024
+   # temp_tc1     	 4.0e-03
+   # temp_tc2     	 0
+   # gate_forming_layer  	 false
+   # rho
+     # rho_silicon_widths  0.012 0.024 0.030 0.036
+     # rho_silicon_thicknesses 0.024
+     # rho_values     0.1 0.061361936 0.05152793 0.047666912
+
+# }
+ 
+# conductor M9 {
+   # min_spacing  	 0.014
+   # min_width    	 0.032
+   # height       	 0.15
+   # thickness    	 0.064
+   # temp_tc1     	 4.0e-03
+   # temp_tc2     	 0
+   # gate_forming_layer  	 false
+   # rho
+     # rho_silicon_widths  0.012 0.024 0.030 0.036
+     # rho_silicon_thicknesses 0.024
+     # rho_values     0.1 0.061361936 0.05152793 0.047666912
+
+# }
+ 
+# dielectric Layers 
+dielectric   STI {
+   conformal 		   FALSE 
+   height    		   0.0000 
+   thickness 		   0.0500 
+   dielectric_constant 	   3.9 
+} 
+ 
+dielectric   PMD {
+   conformal 		   FALSE 
+   height    		   0.0500 
+   thickness 		   0.0010 
+   dielectric_constant 	   3.9 
+} 
+ 
+dielectric   PMD3 {
+   conformal 		   FALSE 
+   height    		   0.0510 
+   thickness 		   0.0270 
+   dielectric_constant 	   3.9 
+} 
+ 
+dielectric   ILDV0 {
+   conformal 		   FALSE 
+   height    		   0.0780 
+   thickness 		   0.0240 
+   dielectric_constant 	   3.9 
+} 
+ 
+dielectric   ILD1 {
+   conformal 		   FALSE 
+   height    		   0.1020 
+   thickness 		   0.0220 
+   dielectric_constant 	   2.9 
+} 
+ 
+dielectric   HM1 {
+   conformal 		   FALSE 
+   height    		   0.1240 
+   thickness 		   0.0020 
+   dielectric_constant 	   4.8 
+} 
+ 
+dielectric   ILD2 {
+   conformal 		   FALSE 
+   height    		   0.1260 
+   thickness 		   0.0220 
+   dielectric_constant 	   2.9 
+} 
+ 
+dielectric   HM2 {
+   conformal 		   FALSE 
+   height    		   0.1480 
+   thickness 		   0.0020 
+   dielectric_constant 	   4.8 
+} 
+ 
+dielectric   ILD9 {
+   conformal 		   FALSE 
+   height    		   0.1500 
+   thickness 		   0.0620 
+   dielectric_constant 	   2.9 
+} 
+ 
+dielectric   HM9 {
+   conformal 		   FALSE 
+   height    		   0.2120 
+   thickness 		   0.0020 
+   dielectric_constant 	   4.8 
+} 
+ 
+dielectric   ILDV9 {
+   conformal 		   FALSE 
+   height    		   0.2140 
+   thickness 		   0.0640 
+   dielectric_constant 	   2.9 
+} 
+ 
+# Connect Layers 
+via   CONT {
+   bottom_layer  	 P_SOURCE_DRAIN 
+   top_layer     	 LISD 
+   contact_resistance  	 15 
+} 
+ 
+via   CONT {
+   bottom_layer  	 N_SOURCE_DRAIN 
+   top_layer     	 LISD 
+   contact_resistance  	 15 
+} 
+ 
+# via   V8 {
+   # bottom_layer   	 M8
+   # top_layer      	 M9
+   # contact_resistance 6.13
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V7 {
+   # bottom_layer   	 M7
+   # top_layer      	 M8
+   # contact_resistance 10.81
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V6 {
+   # bottom_layer   	 M6
+   # top_layer      	 M7
+   # contact_resistance 10.81
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V5 {
+   # bottom_layer   	 M5
+   # top_layer      	 M6
+   # contact_resistance 19.38
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V4 {
+   # bottom_layer   	 M4
+   # top_layer      	 M5
+   # contact_resistance 19.38
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V3 {
+   # bottom_layer   	 M3
+   # top_layer      	 M4
+   # contact_resistance 63.5282407
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V2 {
+   # bottom_layer   	 M2
+   # top_layer      	 M3
+   # contact_resistance 63.5282407
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+ 
+# via   V1 {
+   # bottom_layer   	 M1
+   # top_layer      	 M2
+   # contact_resistance 63.5282407
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+ 
+# via   V0LIG {
+   # bottom_layer   	 LIG
+   # top_layer      	 M1
+   # contact_resistance 63.5282407
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+
+# via   V0LISD {
+   # bottom_layer   	 LISD
+   # top_layer      	 M1
+   # contact_resistance 63.5282407
+   # temp_tc1       	 4.0e-03
+   # temp_tc2       	 0
+# }
+ 
