@@ -38,7 +38,7 @@ The PDK is designed to support:
 
 The following table highlights key architectural and research-oriented differences between SCCAD-3nm and other publicly available academic 3nm PDKs.
 
-| Feature | NCSU (FreePDK3) | GT3 | **SCCAD-3nm** |
+| Feature | FreePDK3 (NCSU) | GT3 (Gatech) | **SCCAD-3nm** |
 |----------|----------------|------|----------------|
 | **Tech Node** | 3nm | 3nm | 3nm |
 | **Device Type** | GAAFET | GAAFET | GAAFET |
