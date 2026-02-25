@@ -53,7 +53,6 @@ The following table highlights key architectural and research-oriented differenc
 - Enables exploration of **Front-side and Buried Power Rail (FSPR / BPR)**
 - Provides **Back-side Metal support** for advanced power-delivery studies
 - Includes collateral for **PDK development and methodology research**
-- Designed to facilitate **DTCO and advanced-node architectural experiments**
 
 ---
 
