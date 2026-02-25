@@ -1,9 +1,4 @@
-$ Technology: 3nm
-$ Date: 05/09/2021
-$ Name: Junsik Yoon
-$ Comments: ITF starts from top to bottom (ICT: bottom to top)
-
-TECHNOLOGY = 3nm_FF_noBPR
+TECHNOLOGY = 3nm_GAA
 BACKGROUND_ER = 1.0
 GLOBAL_TEMPERATURE = 25
 
