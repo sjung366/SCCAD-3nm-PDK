@@ -1,36 +1,3 @@
-// BSD 3-Clause License
-//
-// Copyright 2024 Piyush Kumar, Da Eun Shim, Azad Naeemi, or Georgia Institute of Technology
-//
-// Redistribution and use in source and binary forms, with or without 
-// modification, are permitted provided that the following conditions are met:
-//
-// 1. Redistributions of source code must retain the above copyright notice, 
-// this list of conditions and the following disclaimer.
-//
-// 2. Redistributions in binary form must reproduce the above copyright notice, 
-// this list of conditions and the following disclaimer in the documentation 
-// and/or other materials provided with the distribution.
-//
-// 3. Neither the name of the copyright holder nor the names of its contributors 
-// may be used to endorse or promote products derived from this software without 
-// specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
-// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
-// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
-// FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
-// (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
-// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND 
-// ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
-// SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-
-
-// gt3 drc main file
-
 #define SELECTABLE_VIOLATION_NAMES
 #define ICV_ENABLE_WIDE_ANGLED
 #include <icv.rh>
@@ -153,28 +120,28 @@ gP_GATE_or_gN_GATE = gP_GATE or gN_GATE;
 CONNECT_DB = incremental_connect( CONNECT_DB, {{{ gP_GATE_or_gN_GATE , aVG }}} );
 
 
-#include "Include/gt3.bpr.drc.rs"
-#include "Include/gt3.vbpr.drc.rs"
-#include "Include/gt3.gate.drc.rs"
-#include "Include/gt3.dummy.drc.rs"
-#include "Include/gt3.gcut.drc.rs"
-#include "Include/gt3.vg.drc.rs"
-#include "Include/gt3.act.drc.rs"
-#include "Include/gt3.npsel.drc.rs"
-#include "Include/gt3.sdcon.drc.rs"
-#include "Include/gt3.vsd.drc.rs"
-#include "Include/gt3.m0.drc.rs"
-#include "Include/gt3.v0.drc.rs"
-#include "Include/gt3.m1.drc.rs"
-#include "Include/gt3.v1.drc.rs"
-#include "Include/gt3.m2.drc.rs"
-#include "Include/gt3.v2.drc.rs"
-#include "Include/gt3.m3.drc.rs"
-#include "Include/gt3.v3.drc.rs"
-#include "Include/gt3.m4.drc.rs"
-#include "Include/gt3.v4.drc.rs"
-#include "Include/gt3.m5.drc.rs"
-#include "Include/gt3.v5.drc.rs"
-#include "Include/gt3.m6.drc.rs"
+#include "Include/sc3.bpr.drc.rs"
+#include "Include/sc3.vbpr.drc.rs"
+#include "Include/sc3.gate.drc.rs"
+#include "Include/sc3.dummy.drc.rs"
+#include "Include/sc3.gcut.drc.rs"
+#include "Include/sc3.vg.drc.rs"
+#include "Include/sc3.act.drc.rs"
+#include "Include/sc3.npsel.drc.rs"
+#include "Include/sc3.sdcon.drc.rs"
+#include "Include/sc3.vsd.drc.rs"
+#include "Include/sc3.m0.drc.rs"
+#include "Include/sc3.v0.drc.rs"
+#include "Include/sc3.m1.drc.rs"
+#include "Include/sc3.v1.drc.rs"
+#include "Include/sc3.m2.drc.rs"
+#include "Include/sc3.v2.drc.rs"
+#include "Include/sc3.m3.drc.rs"
+#include "Include/sc3.v3.drc.rs"
+#include "Include/sc3.m4.drc.rs"
+#include "Include/sc3.v4.drc.rs"
+#include "Include/sc3.m5.drc.rs"
+#include "Include/sc3.v5.drc.rs"
+#include "Include/sc3.m6.drc.rs"
 
 
