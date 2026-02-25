@@ -2,7 +2,7 @@
 .LIB TT
 
 **********************************************
-*   3-nm-node FinFET                         *
+*   3-nm-node NSFET                         *
 **********************************************
 .MODEL NMOS_RVT NMOS ( LEVEL =72
 ************************************************************
@@ -16,7 +16,7 @@
 +toxp    = 1.7e-009        nbody   = 1e+021          epsrox  = 3.9             hfin    = 4.5e-008   
 +epsrsub = 11.9            easub   = 4.05            ni0sub  = 1.1e+016        bg0sub  = 1.12
 +nc0sub  = 2.86e+025       nsd     = 4e+026          sdterm  = 0               nf      = 1 
-+l       = 1.2e-008        lsp     = 5.0e-9          epsrsp  = 3.9             nfin    = 3
++l       = 1.2e-008        lsp     = 5.0e-9          epsrsp  = 3.9             nfin    = 1
 +fpitch  = 2.0e-008	   type=1
 ************************************************************
 *                            dc                            *
@@ -77,7 +77,7 @@
 +toxp    = 1.7e-009        nbody   = 1e+021          epsrox  = 3.9             hfin    = 3.5e-008   
 +epsrsub = 11.9            easub   = 4.05            ni0sub  = 1.1e+016        bg0sub  = 1.12
 +nc0sub  = 2.86e+025       nsd     = 4e+026          sdterm  = 0               nf      = 1 
-+l       = 1.2e-008        lsp     = 5.0e-9          epsrsp  = 3.9             nfin    = 3
++l       = 1.2e-008        lsp     = 5.0e-9          epsrsp  = 3.9             nfin    = 1
 +fpitch  = 6.0e-008        type=-1
 ************************************************************
 *                            dc      4.654964                    *
