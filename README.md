@@ -31,6 +31,34 @@ The PDK is designed to support:
 
 ---
 
+
+---
+
+## Comparison with Other Academic 3nm PDKs
+
+The following table highlights key architectural and research-oriented differences between SCCAD-3nm and other publicly available academic 3nm PDKs.
+
+| Feature | NCSU (FreePDK3) | GT3 | **SCCAD-3nm** |
+|----------|----------------|------|----------------|
+| **Tech Node** | 3nm | 3nm | 3nm |
+| **Device Type** | GAAFET | GAAFET | GAAFET |
+| **Cell Heights** | 5.5T | 6T | **6T, 5T** |
+| **Power Rail (PR)** | Front-side PR (FSPR) | Buried PR (BPR) | **FSPR, BPR (Configurable)** |
+| **Support Back-side Metal** | No | No | **Yes** |
+| **Provide Files for PDK Development** | No | No | **Yes** |
+
+### Key Advantages of SCCAD-3nm
+
+- Supports **multiple cell-height architectures (6T and 5T)**
+- Enables exploration of **Front-side and Buried Power Rail (FSPR / BPR)**
+- Provides **Back-side Metal support** for advanced power-delivery studies
+- Includes collateral for **PDK development and methodology research**
+- Designed to facilitate **DTCO and advanced-node architectural experiments**
+
+---
+
+
+
 ## Contents
 
 The repository includes the following major components:
