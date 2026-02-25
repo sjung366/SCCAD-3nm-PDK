@@ -39,9 +39,9 @@ Layer "well" {
 }
 
 
-Layer "fin" {
+Layer "nanosheet" {
 	layerNumber			= 2 
-	maskName			= "fin"
+	maskName			= "nanosheet"
 	visible				= 1
 	selectable			= 1
 	blink				= 0
