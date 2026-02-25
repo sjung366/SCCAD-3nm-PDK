@@ -17,20 +17,6 @@ Please select the PDK for your EDA tool.
 
 
 
----
-
-## Overview
-
-The SCCAD-3nm PDK provides a complete technology stack for digital design studies at the 3 nm node, including technology definitions, standard-cell libraries, timing models, parasitic extraction data, and design rule checking (DRC) support.
-
-The PDK is designed to support:
-- Standard-cell based digital implementation
-- Physical design and place-and-route (PnR) experiments
-- RC extraction and timing analysis
-- Advanced-node research (e.g., DTCO, BEOL scaling, M3D, BS-PDN)
-
----
-
 
 ---
 
