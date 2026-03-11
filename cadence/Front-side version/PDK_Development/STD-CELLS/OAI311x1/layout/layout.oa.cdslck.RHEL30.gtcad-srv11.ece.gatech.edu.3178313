@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      ctsai314
+HostName                       gtcad-srv11.ece.gatech.edu
+ProcessIdentifier              3178313
+ProcessCreationTime_UTC        1735587890
+ProcessCreationTime_Readable   Mon Dec 30 14:44:50 2024 EST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/gtcad/ctsai314/241004_FEoL_exploration/oa/NS_lib_Wch30_Lcon20/OAI311x1/layout/layout.oa.cdslck
+TimeEditLocked                 Mon Dec 30 14:48:54 2024 EST
