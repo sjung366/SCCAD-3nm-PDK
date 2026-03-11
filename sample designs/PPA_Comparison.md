@@ -2,7 +2,7 @@
 
 This repository contains sample designs and evaluation results for the **SCCAD 3nm Process Design Kit (PDK)**. 
 
-##  PPA Comparison: Frontside vs. Backside PDN
+##  PPA Comparison: Frontside vs. Backside-Version
 The following table summarizes the Power, Performance, and Area (PPA) results for two distinct designs (ECG and OpenPiton).
 
 | Benchmark | ECG | ECG | OpenPiton | OpenPiton |
