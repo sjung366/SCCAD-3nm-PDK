@@ -78,31 +78,6 @@ The PDK is primarily oriented toward **research and prototyping**, rather than m
 
 ---
 
-## Intended Use
-
-This PDK is intended for:
-- Academic research
-- Graduate-level education
-- Methodology development
-- Tool evaluation and benchmarking
-
-It is **not intended for commercial tape-out or fabrication**.
-
----
-
-## License
-
-This project is released as an open-source academic PDK.  
-Please refer to the `LICENSE` file for detailed terms of use.
-
----
-
-## Citation
-
-If you use SCCAD-3nm-PDK in your research, please cite the corresponding SCCAD publications.
-
----
-
 ## Contact
 
 For questions or contributions, please contact the SCCAD Group at USC.
