@@ -1,0 +1,678 @@
+* BSD 3-Clause License
+*
+* Copyright (c) 2026 <Sungwoo Jung, Cheng-Yu Tsai, Amaan Rahman, Junsik Yoon, Sandra Maria Shaji, Sung Kyu Lim >, University of Southern California
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted under the BSD 3-Clause License.
+* See the LICENSE file in the project root for full license terms.
+
+
+.SUBCKT AND2x1 A B VDD VSS Y
+MM1 net12 A VDD pmos_lvt l=0.012u wgaa=0.03u
+MM3 net12 B VDD pmos_lvt l=0.012u wgaa=0.03u
+MM5 Y net12 VDD pmos_lvt l=0.012u wgaa=0.03u
+
+MM2 Y net12 VSS nmos_lvt l=0.012u wgaa=0.03u
+MM4 net7 B VSS nmos_lvt l=0.012u wgaa=0.03u
+MM6 net12 A net7 nmos_lvt l=0.012u wgaa=0.03u
+.ENDS AND2x1
+
+
+.SUBCKT AND3x1 A B C VDD VSS Y
+MM8 net18 B VDD pmos_lvt l=0.012u wgaa=0.03u
+MM4 Y net18 VDD pmos_lvt l=0.012u wgaa=0.03u
+MM1 net18 A VDD pmos_lvt l=0.012u wgaa=0.03u
+MM13 net18 C VDD pmos_lvt l=0.012u wgaa=0.03u
+
+MM2 net18 A net12 nmos_lvt l=0.012u wgaa=0.03u
+MM12 net19 C VSS nmos_lvt l=0.012u wgaa=0.03u
+MM6 Y net18 VSS nmos_lvt l=0.012u wgaa=0.03u
+MM7 net12 B net19 nmos_lvt l=0.012u wgaa=0.03u
+.ENDS AND3x1
+
+
+.SUBCKT AND4x1 A B C D VDD VSS Y
+MM9  net18 B VDD pmos_lvt l=0.012u wgaa=0.03u
+MM15 net18 D VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM3  net18 A VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM12 net18 C VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM6  Y net18 VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM5  net12 B net24 nmos_lvt l=0.012u wgaa=0.03u 
+MM13 net24 D VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM2  net18 A net12 nmos_lvt l=0.012u wgaa=0.03u 
+MM10 net22 C net24 nmos_lvt l=0.012u wgaa=0.03u 
+MM7  Y net18 VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AND4x1
+
+
+.SUBCKT AOI21x1 A B C VDD VSS Y
+MM30 net80 C VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM33 Y A net80 pmos_lvt l=0.012u wgaa=0.03u 
+MM34 Y B net80 pmos_lvt l=0.012u wgaa=0.03u 
+
+MM31 Y C VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM26 net76 B VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM29 Y A net76 nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AOI21x1
+
+
+.SUBCKT AOI221x1 A B C D E VDD VSS Y
+MM28 net015 B VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM30 net15 C Y VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM32 net15 D Y VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM3  net015 E net15 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM34 net015 A VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM23 Y C net25 nmos_lvt l=0.012u wgaa=0.03u 
+MM0  net25 B VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM27 net20 D VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM25 Y E VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM6  Y A net25 VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AOI221x1
+
+
+.SUBCKT AOI222x1 A B C D E F VDD VSS Y
+MM14 Y B net55 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM6 net25 E VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM9 net55 C net25 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM8 net55 D net25 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM10 Y A net55 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM12 net25 F VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM5 net47 B VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM3 Y A net47 nmos_lvt l=0.012u wgaa=0.03u 
+MM9 net55 F VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM2 Y C net52 nmos_lvt l=0.012u wgaa=0.03u 
+MM7 Y E net55 nmos_lvt l=0.012u wgaa=0.03u 
+MM6 net52 D VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AOI222x1
+
+
+.SUBCKT AOI22x1 A B C D VDD VSS Y
+MM18 Y D net61 pmos_lvt l=0.012u wgaa=0.03u 
+MM27 net61 B VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM16 net61 A VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM11 Y C net61 pmos_lvt l=0.012u wgaa=0.03u 
+
+MM15 Y B net38 nmos_lvt l=0.012u wgaa=0.03u 
+MM21 net65 C VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM17 Y D net65 nmos_lvt l=0.012u wgaa=0.03u 
+MM16 net38 A VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AOI22x1
+
+
+.SUBCKT AOI311x1 A B C D E VDD VSS Y
+MM10 net026 D net19 VDD pmos_lvt l=0.012u wgaa=0.03u
+MM8 net19 B VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM2 Y E net026 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM11 net19 C VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM4 net19 A VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM4 net34 B net27 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM3 net27 C VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM2 Y A net34 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM1 Y E VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM7 Y D VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AOI311x1
+
+
+.SUBCKT AOI31x1 A B C D VDD VSS Y
+MM15 net90 A VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM28 net90 B VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM30 net90 C VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM18 Y D net90 pmos_lvt l=0.012u wgaa=0.03u 
+
+MM27 net96 B net101 nmos_lvt l=0.012u wgaa=0.03u 
+MM14 Y A net96 nmos_lvt l=0.012u wgaa=0.03u 
+MM17 net101 C VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM21 Y D VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS AOI31x1
+
+
+.SUBCKT BUFx1 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS BUFx1
+
+
+.SUBCKT BUFx10 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=3
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=10
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=3
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=10
+.ENDS BUFx10
+
+
+.SUBCKT BUFx2 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+.ENDS BUFx2
+
+
+.SUBCKT BUFx3 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=3
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=3
+.ENDS BUFx3
+
+
+.SUBCKT BUFx4 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=4
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=4
+.ENDS BUFx4
+
+
+.SUBCKT BUFx5 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=5
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=5
+.ENDS BUFx5
+
+
+.SUBCKT BUFx6 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=6
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=6
+.ENDS BUFx6
+
+
+.SUBCKT BUFx7 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=7
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=7
+.ENDS BUFx7
+
+
+.SUBCKT BUFx8 A VDD VSS Y
+MM1 net11 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y net11 VDD pmos_lvt l=0.012u wgaa=0.03u m=8
+
+MM2 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net11 VSS nmos_lvt l=0.012u wgaa=0.03u m=8
+.ENDS BUFx8
+
+
+.SUBCKT DFFHQNx1 CK D QN VDD VSS
+MM20 SH ckb pd4 pmos_lvt l=0.012u wgaa=0.03u 
+MM9 MS MH VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM17 SS SH VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM12 MH ckn pd2 pmos_lvt l=0.012u wgaa=0.03u 
+MM8 pd2 MS VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM24 ckb ckn VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM23 pd4 SS VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM29 QN SH VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM25 ckn CK VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM15 MS ckn SH VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM2 MH ckb pu1 pmos_lvt l=0.012u wgaa=0.03u 
+MM6 pu1 D VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM5 pd3 MS VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM3 pd1 D VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM14 SH ckn pd5 nmos_lvt l=0.012u wgaa=0.03u 
+MM1 MH ckn pd1 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM11 SS SH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM13 pd5 SS VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM16 ckn CK VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM10 MS ckb SH nmos_lvt l=0.012u wgaa=0.03u 
+MM4 MS MH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM21 ckb ckn VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM26 QN SH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM7 MH ckb pd3 VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS DFFHQNx1
+
+
+.SUBCKT DFFHx1 CK D Q VDD VSS
+MM64 net0114 SH VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM63 Q net0114 VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM60 MS ckn SH VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM59 pu1 D VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM58 MH ckb pu1 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM57 SS SH VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM56 MS MH VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM49 pd4 SS VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM45 ckn CK VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM48 MH ckn pd2 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM47 SH ckb pd4 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM50 pd2 MS VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM46 ckb ckn VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM62 Q net0114 VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM61 net0114 SH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM55 MS ckb SH VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM44 SH ckn pd5 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM54 SS SH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM53 MS MH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM52 MH ckn pd1 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM51 pd1 D VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM43 MH ckb pd3 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM39 pd3 MS VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM40 pd5 SS VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM42 ckb ckn VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM41 ckn CK VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS DFFHx1
+
+
+.SUBCKT DHLx1 CK D Q VDD VSS
+MM1 MH ckn pu1 VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM3 pu1 D VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM13 ckb ckn VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM25 Q MH VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM12 ckn CK VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM7 net088 MH VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM11 pd2 net088 VDD VDD pmos_lvt l=0.012u wgaa=0.03u 
+MM10 MH ckb pd2 VDD pmos_lvt l=0.012u wgaa=0.03u 
+
+MM5 pd1 D VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM4 MH ckb pd1 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM2 ckb ckn VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM0 ckn CK VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM24 Q MH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM6 net088 MH VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM9 MH ckn pd3 VSS nmos_lvt l=0.012u wgaa=0.03u 
+MM8 pd3 net088 VSS VSS nmos_lvt l=0.012u wgaa=0.03u 
+.ENDS DHLx1
+
+
+.SUBCKT INVx1 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=1
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=1
+.ENDS INVx1
+
+
+.SUBCKT INVx10 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=10
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=10
+.ENDS INVx10
+
+
+.SUBCKT INVx12 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=12
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=12
+.ENDS INVx12
+
+
+.SUBCKT INVx14 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=14
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=14
+.ENDS INVx14
+
+
+.SUBCKT INVx16 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=16
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=16
+.ENDS INVx16
+
+
+.SUBCKT INVx2 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=2
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=2
+.ENDS INVx2
+
+
+.SUBCKT INVx3 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=3
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=3
+.ENDS INVx3
+
+
+.SUBCKT INVx4 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=4
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=4
+.ENDS INVx4
+
+
+.SUBCKT INVx5 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=5
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=5
+.ENDS INVx5
+
+
+.SUBCKT INVx6 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=6
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=6
+.ENDS INVx6
+
+
+.SUBCKT INVx7 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=7
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=7
+.ENDS INVx7
+
+
+.SUBCKT INVx8 A VDD VSS Y
+MM0 Y A VDD pmos_lvt wgaa=0.030u l=0.012u m=8
+MM1 Y A VSS nmos_lvt wgaa=0.030u l=0.012u m=8
+.ENDS INVx8
+
+
+.SUBCKT MUX2x1 A B S VDD VSS Y
+MM1 net12 S VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 net12 S VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM6 net20 net12 A pmos_lvt l=0.012u wgaa=0.03u m=1
+MM8 net20 S B pmos_lvt l=0.012u wgaa=0.03u m=1
+MM2 Y net20 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM3 Y net20 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM5 net20 net12 A nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 net20 S B nmos_lvt l=0.012u wgaa=0.03u m=1
+MM9 Y net20 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM10 Y net20 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS MUX2x1
+
+
+.SUBCKT NAND2x1 A B VDD VSS Y
+MM5 Y B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 Y A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM4 Y B net10 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 net10 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS NAND2x1
+
+
+.SUBCKT NAND2x2 A B VDD VSS Y
+MM5 Y B VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+MM12 Y A VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+
+MM4 Y B net10 nmos_lvt l=0.012u wgaa=0.03u m=2
+MM7 net10 A VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+.ENDS NAND2x2
+
+
+.SUBCKT NAND3x1 A B C VDD VSS Y
+MM0 Y C VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 Y A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM2 net9 B net10 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y C net9 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 net10 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS NAND3x1
+
+
+.SUBCKT NAND3x2 A B VDD VSS Y
+MM0 Y C VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+MM5 Y B VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+MM12 Y A VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+
+MM2 net9 B net10 nmos_lvt l=0.012u wgaa=0.03u m=2
+MM4 Y C net9 nmos_lvt l=0.012u wgaa=0.03u m=2
+MM7 net10 A VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+.ENDS NAND3x2
+
+
+.SUBCKT NAND4x1 A B C D VDD VSS Y
+MM0 Y D VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y C VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 Y B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM15 Y A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM2 net9 C net10 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y D net9 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 net10 B net11 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM14 net11 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS NAND4x1
+
+
+.SUBCKT NOR2x1 A B VDD VSS Y
+MM1 net20 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y B net20 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM2 Y B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM6 Y A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS NOR2x1
+
+
+.SUBCKT NOR2x2 A B VDD VSS Y
+MM5 Y B net24 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 net24 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM1 net18 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM9 Y B net18 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM4 Y B VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+MM0 Y A VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+.ENDS NOR2x2
+
+
+.SUBCKT NOR3x1 A B C VDD VSS Y
+MM4 Y C net21 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM2 net21 B net19 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM1 net19 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM0 Y A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM6 Y C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS NOR3x1
+
+
+.SUBCKT NOR3x2 A B C VDD VSS Y
+MM8 net9 B net4 pmos_lvt l=0.012u wgaa=0.03u m=2
+MM12 Y C net9 pmos_lvt l=0.012u wgaa=0.03u m=2
+MM3 net4 A VDD pmos_lvt l=0.012u wgaa=0.03u m=2
+
+MM6 Y A VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+MM15 Y C VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+MM13 Y B VSS nmos_lvt l=0.012u wgaa=0.03u m=2
+.ENDS NOR3x2
+
+
+.SUBCKT NOR4x1 A B C D VDD VSS Y
+MM7 Y D net23 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 net23 C net21 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM2 net21 B net19 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM1 net19 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM0 Y A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM6 Y C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM8 Y D VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS NOR4x1
+
+
+.SUBCKT OAI21x1 A B C VDD VSS Y
+MM29 Y C VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM24 net71 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM31 Y A net71 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM34 Y B net89 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM25 net89 C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM28 Y A net89 nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OAI21x1
+
+
+.SUBCKT OAI22x1 A B C D VDD VSS Y
+MM26 net72 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM33 Y B net72 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM31 net98 C VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM36 Y D net98 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM27 net92 C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM30 Y A net92 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM35 net92 D VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM33 Y B net92 nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OAI22x1
+
+
+.SUBCKT OAI31x1 A B C D VDD VSS Y
+MM26 net71 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM31 net117 B net71 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM34 Y C net117 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM24 Y D VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM33 Y B net89 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM30 Y A net89 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM39 Y C net89 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM25 net89 D VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OAI31x1
+
+
+.SUBCKT OAI221x1 A B C D E VDD VSS Y
+MM27 net051 B VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM1 Y E VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y A net044 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM0 net045 D VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM3 Y C net045 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM11 VSS B net041 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM13 VSS A net041 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM6 net049 E Y VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM8 net041 C net048 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM14 net041 D net048 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OAI221x1
+
+
+.SUBCKT OAI222x1 A B C D E F VDD VSS Y
+MM7 net29 F VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM8 Y E net29 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM2 net33 B VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM1 Y A net33 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM3 Y C net26 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 net26 D VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM13 net012 F VSS VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 Y A net012 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM10 net012 E VSS VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM11 net015 C net012 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM9 net015 D net012 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 Y B net015 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OAI222x1
+
+
+.SUBCKT OAI311x1 A B C D E VDD VSS Y
+MM15 net038 C VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM8 Y E VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM2 net32 B net038 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 Y D VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y A net32 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM25 VSS C net013 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM10 VSS A net013 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM5 net019 E Y VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 net013 D net019 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 VSS B net013 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OAI311x1
+
+
+.SUBCKT OR2x1 A B VDD VSS Y
+MM4 net32 B VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM6 Y net23 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM1 net23 A net32 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM6 Y net23 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM0 net23 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM8 net23 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OR2x1
+
+
+.SUBCKT OR3x1 A B C VDD VSS Y
+MM7 Y net33 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM0 net33 A VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 net39 B net29 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM14 net33 C net39 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM12 net33 C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM3 net33 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4 Y net33 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM2 net33 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OR3x1
+
+
+.SUBCKT OR4x1 A B C D VDD VSS Y
+MM7  Y net33 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM0  net33 A VDD VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM4  net39 B net29 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM14 net41 C net39 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM18 net33 D net41 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM12 net33 C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM3  net33 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM4  Y net33 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM2  net33 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM16 net33 D VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS OR4x1
+
+
+.SUBCKT XNOR2x1 A B VDD VSS Y
+MM30 net83 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM22 net83 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM27 Y A net66 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM26 net66 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM21 net83 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM21 net62 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM33 net80 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM31 net80 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM26 Y net83 net80 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM28 net83 A net62 nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS XNOR2x1
+
+
+.SUBCKT XNOR3x1 A B C VDD VSS Y
+MM30 net83 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM22 net83 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM27 net66 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM26 net66 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM21 net83 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM34 Y C net66 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM35 Y net83 VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM21 net62 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM33 net80 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM31 net80 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM26 Y net83 net80 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM28 net83 A net62 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM36 net66 C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM37 Y net66 net80 nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS XNOR3x1
+
+
+.SUBCKT XOR2x1 A B VDD VSS Y
+MM11 net21 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM19 net34 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM17 Y net21 net35 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 net21 A net26 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM13 net35 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM17 net43 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM15 Y A net43 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM14 net21 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM15 Y net21 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 net21 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS XOR2x1
+
+
+.SUBCKT XOR3x1 A B C VDD VSS Y
+MM11 net21 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM19 net34 B VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM17 net45 C VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM12 net21 A net26 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM13 net35 A VDD pmos_lvt l=0.012u wgaa=0.03u m=1
+MM20 Y net21 net35 pmos_lvt l=0.012u wgaa=0.03u m=1
+MM21 Y net45 net34 pmos_lvt l=0.012u wgaa=0.03u m=1
+
+MM18 net43 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM15 Y A net43 nmos_lvt l=0.012u wgaa=0.03u m=1
+MM14 net21 A VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM16 Y net21 VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM7 net21 B VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM22 net34 C VSS nmos_lvt l=0.012u wgaa=0.03u m=1
+MM23 Y net45 net34 nmos_lvt l=0.012u wgaa=0.03u m=1
+.ENDS XOR3x1
