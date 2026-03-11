@@ -5,8 +5,8 @@ This repository contains sample designs and evaluation results for the **SCCAD 3
 ##  PPA Comparison: Frontside vs. Backside PDN
 The following table summarizes the Power, Performance, and Area (PPA) results for two distinct designs (ECG and OpenPiton).
 
-| Benchmark | \- | **ECG** | \- | **OpenPiton** | 
-| :--- | :--- | :---: | :---: | :---: | :---: |
+| Benchmark | **ECG** | **ECG** | **OpenPiton** | **OpenPiton** | 
+| :--- | :--- | :---: | :---: | :---: |
 | **PDK Version** |  **Frontside** | **Backside** | **Frontside** | **Backside** |
 | **Target Freq. (GHz)** |  8 | 8 | 2 | 2 |
 | **Footprint ($\mu m \times \mu m$)** |  53 x 53 | 53 x 53 | 357 x 357 | 357 x 357 |
